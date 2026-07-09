@@ -3,11 +3,24 @@ using namespace std;
 
 // Vector is like array but the size is dynamic (Can be changed)
 
+/*
+Working of vector: 
+When we insert an element at the end, the size of vector get doubled first and the content of the previous one and the new element(s) get copied to the new vector
+We can also check this with capacity() function which returns the size of the vector that is allocated in memory.
+{1}
+{1, 2}
+{1, 2, 3, _}
+{1, 2, 3, 4, _, _, _, _}
+*/
+
 int main() {
     vector<int> v;
     v.push_back(10);
     v.emplace_back(20);
+    v.emplace_back(30);
     cout << v[0] << endl;
+    cout << v.capacity() << endl;
+    cout << v.size() << endl;
 
     vector<pair<int, int>> vp;
     vp.push_back({1, 2});
