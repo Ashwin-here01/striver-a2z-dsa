@@ -27,6 +27,8 @@ int main() {
     dq.emplace_front(1);
     dq.pop_front();
 
+    cout << dq[0] << endl; // Deque supports random accessing (No Error)
+
     // Front function is cheaper (in time complexity) than insert function
     
     // Rest all functions are same as vector
